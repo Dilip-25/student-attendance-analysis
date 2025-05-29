@@ -1,0 +1,11 @@
+<form method="POST">
+    <h1>Mark Attendance</h1>
+    {% for student in students %}
+    <div>
+        <label>{{ student[1] }}</label>
+        <input type="radio" name="{{ student[0] }}" value="Present" required> Present
+        <input type="radio" name="{{ student[0] }}" value="Absent"> Absent
+    </div>
+    {% endfor %}
+    <button type="submit">Submit</button>
+</form>

@@ -1,0 +1,19 @@
+<h1>Attendance Report</h1>
+<table border="1">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Present</th>
+            <th>Absent</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for row in report %}
+        <tr>
+            <td>{{ row[0] }}</td>
+            <td>{{ row[1] or 0 }}</td>
+            <td>{{ row[2] or 0 }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
